@@ -3,7 +3,7 @@
 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
-<!-- 2020-02-21 Fri 17:39 -->
+<!-- 2020-02-21 Fri 17:47 -->
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>IBM Blockchain Fabric</title>
@@ -240,10 +240,10 @@ for the JavaScript code in this tag.
 <h2>Table of Contents</h2>
 <div id="text-table-of-contents">
 <ul>
-<li><a href="#orgafb7325">Necessary Configuration</a></li>
-<li><a href="#orgd84b440">Install nvm to select the node version you want to work with</a></li>
-<li><a href="#org4d6a5a1">Copy the blockchainbean2 Demo</a></li>
-<li><a href="#org6e2b14a">Import the smart contract/chaincode on VS and package the contract</a></li>
+<li><a href="#org51f6e03">Necessary Configuration</a></li>
+<li><a href="#org6fbea62">Install nvm to select the node version you want to work with</a></li>
+<li><a href="#orgb61975d">Copy the blockchainbean2 Demo</a></li>
+<li><a href="#org5c18888">Import the smart contract/chaincode on VS and package the contract</a></li>
 </ul>
 </div>
 </div>
@@ -259,15 +259,16 @@ The intent is to create a network that tracks the production of
 coffee from the beginning to the end.
 </p>
 
-<div id="outline-container-orgafb7325" class="outline-2">
-<h2 id="orgafb7325">Necessary Configuration</h2>
-<div class="outline-text-2" id="text-orgafb7325">
+<div id="outline-container-org51f6e03" class="outline-2">
+<h2 id="org51f6e03">Necessary Configuration</h2>
+<div class="outline-text-2" id="text-org51f6e03">
 <p>
 Install docker and docker-compose following <a href="https://hub.docker.com/editions/community/docker-ce-desktop-mac/">this</a> link.
 </p>
 
 <p>
-Check upon the successful installation of docker.
+Check upon the successful installation of docker. I am running this
+demo with the following docker configuration.
 </p>
 
 <div class="org-src-container">
@@ -275,6 +276,12 @@ Check upon the successful installation of docker.
 docker-compose --version
 </pre>
 </div>
+
+<pre class="example">
+Docker version 19.03.5, build 633a0ea
+docker-compose version 1.24.1, build 4667896b
+
+</pre>
 
 <p>
 Moreover you will need to install the Visual Code IDE. In the latter
@@ -295,13 +302,14 @@ following the steps in this video:
 
 <video controls="controls" width="600" height="400" 
        name="Video Name" src="/Users/marcohassan/Desktop/Screenshots/Bildschirmvideo aufnehmen 2020-02-20 um 16.12.36.mov/"></video>
+
+<br>
 </div>
 </div>
 
-
-<div id="outline-container-orgd84b440" class="outline-2">
-<h2 id="orgd84b440">Install nvm to select the node version you want to work with</h2>
-<div class="outline-text-2" id="text-orgd84b440">
+<div id="outline-container-org6fbea62" class="outline-2">
+<h2 id="org6fbea62">Install nvm to select the node version you want to work with</h2>
+<div class="outline-text-2" id="text-org6fbea62">
 <p>
 Install node
 </p>
@@ -366,6 +374,21 @@ Check what Node.js versions are installed on your machine
 </pre>
 </div>
 
+<pre class="example">
+-&gt;       v8.9.0 *
+         system
+default -&gt; v8.9.0 *
+node -&gt; stable (-&gt; v8.9.0 *) (default)
+stable -&gt; 8.9 (-&gt; v8.9.0 *) (default)
+iojs -&gt; N/A (default)
+lts/* -&gt; lts/erbium (-&gt; N/A)
+lts/argon -&gt; v4.9.1 (-&gt; N/A)
+lts/boron -&gt; v6.17.1 (-&gt; N/A)
+lts/carbon -&gt; v8.17.0 (-&gt; N/A)
+lts/dubnium -&gt; v10.19.0 (-&gt; N/A)
+lts/erbium -&gt; v12.16.1 (-&gt; N/A)
+</pre>
+
 <p>
 If you do not have v8.9.0, install the specific node version for this tutorial.
 </p>
@@ -397,12 +420,14 @@ Update your <code>npm</code> to use a specific version.
 <pre class="src src-sh">npm install -g npm@6.0.0
 </pre>
 </div>
+
+<br>
 </div>
 </div>
 
-<div id="outline-container-org4d6a5a1" class="outline-2">
-<h2 id="org4d6a5a1">Copy the blockchainbean2 Demo</h2>
-<div class="outline-text-2" id="text-org4d6a5a1">
+<div id="outline-container-orgb61975d" class="outline-2">
+<h2 id="orgb61975d">Copy the blockchainbean2 Demo</h2>
+<div class="outline-text-2" id="text-orgb61975d">
 <div class="org-src-container">
 <pre class="src src-sh">git clone https://github.com/IBM/blockchainbean2.git
 </pre>
@@ -415,6 +440,16 @@ Update your <code>npm</code> to use a specific version.
 ls
 </pre>
 </div>
+
+<pre class="example">
+/Users/marcohassan/Desktop/IBM_projects/minor_tasks/BlockChainTutorials/BlockchainTutorial.github.io
+
+DemoBlockChainKaffee.html
+DemoBlockChainKaffee.org
+_config.yml
+index.html
+
+</pre>
 
 
 <p>
@@ -430,12 +465,14 @@ Go to the <code>web-app</code> directory and install node
 <pre class="src src-sh">npm install --ignore-scripts
 </pre>
 </div>
+
+<br>
 </div>
 </div>
 
-<div id="outline-container-org6e2b14a" class="outline-2">
-<h2 id="org6e2b14a">Import the smart contract/chaincode on VS and package the contract</h2>
-<div class="outline-text-2" id="text-org6e2b14a">
+<div id="outline-container-org5c18888" class="outline-2">
+<h2 id="org5c18888">Import the smart contract/chaincode on VS and package the contract</h2>
+<div class="outline-text-2" id="text-org5c18888">
 <p>
 From here on you can follow the instructions from Step 3 of the
 official Tutorial Guide <a href="https://github.com/IBM/blockchainbean2/blob/master/docs/run-local.md">following this README.md</a>.
@@ -446,7 +483,7 @@ official Tutorial Guide <a href="https://github.com/IBM/blockchainbean2/blob/mas
 <div id="postamble" class="status">
 <p class="date">Date: 2020-02-12</p>
 <p class="author">Author: Marco Hassan</p>
-<p class="date">Created: 2020-02-21 Fri 17:39</p>
+<p class="date">Created: 2020-02-21 Fri 17:47</p>
 <p class="validation"><a href="http://validator.w3.org/check?uri=referer">Validate</a></p>
 </div>
 </body>

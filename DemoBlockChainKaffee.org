@@ -17,9 +17,10 @@ coffee from the beginning to the end.
 
 Install docker and docker-compose following [[https://hub.docker.com/editions/community/docker-ce-desktop-mac/][this]] link.
 
-Check upon the successful installation of docker.
+Check upon the successful installation of docker. I am running this
+demo with the following docker configuration.
 
-#+BEGIN_SRC sh :results output
+#+BEGIN_SRC sh :results output :exports both
 docker --version
 docker-compose --version
 #+END_SRC
@@ -44,6 +45,9 @@ following the steps in this video:
        name="Video Name" src="/Users/marcohassan/Desktop/Screenshots/Bildschirmvideo aufnehmen 2020-02-20 um 16.12.36.mov/"></video>
 #+END_EXPORT
 
+#+BEGIN_EXPORT html
+<br>
+#+END_EXPORT
 
 * Install nvm to select the node version you want to work with
 
@@ -99,13 +103,26 @@ Check what Node.js versions are installed on your machine
 nvm ls
 #+END_SRC
 
+#+BEGIN_EXAMPLE
+->       v8.9.0 *
+         system
+default -> v8.9.0 *
+node -> stable (-> v8.9.0 *) (default)
+stable -> 8.9 (-> v8.9.0 *) (default)
+iojs -> N/A (default)
+lts/* -> lts/erbium (-> N/A)
+lts/argon -> v4.9.1 (-> N/A)
+lts/boron -> v6.17.1 (-> N/A)
+lts/carbon -> v8.17.0 (-> N/A)
+lts/dubnium -> v10.19.0 (-> N/A)
+lts/erbium -> v12.16.1 (-> N/A)
+#+END_EXAMPLE
+
 If you do not have v8.9.0, install the specific node version for this tutorial.
 
 #+BEGIN_SRC sh
 nvm install v8.9.0
 #+END_SRC
-
-#+RESULTS:
 
 Change your node version to the desired version
 
@@ -122,13 +139,17 @@ Update your =npm= to use a specific version.
 npm install -g npm@6.0.0
 #+END_SRC
 
+#+BEGIN_EXPORT html
+<br>
+#+END_EXPORT
+
 * Copy the blockchainbean2 Demo
 
 #+BEGIN_SRC sh
 git clone https://github.com/IBM/blockchainbean2.git
 #+END_SRC
 
-#+BEGIN_SRC sh :results output
+#+BEGIN_SRC sh :results output :exports both
 cd ./blockchainbean2/
 pwd
 echo ""
@@ -165,6 +186,10 @@ cd ./web-app
 #+BEGIN_SRC sh
 npm install --ignore-scripts
 #+END_SRC
+
+#+BEGIN_EXPORT html
+<br>
+#+END_EXPORT
 
 * Import the smart contract/chaincode on VS and package the contract
 
