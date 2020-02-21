@@ -41,6 +41,10 @@ Once you download it, you can download the IBM Blockchain extension by
 following the steps in this video:
 
 #+BEGIN_EXPORT html
+<a href="https://github.com/MarcoHassan/UnBlockDemo/blob/master/data/Bildschirmvideo%20aufnehmen%202020-02-20%20um%2016.12.36.mov">Floppy drive robot</a>
+#+END_EXPORT
+
+#+BEGIN_EXPORT html
 <video controls="controls" width="600" height="400" 
        name="Video Name" src="https://github.com/MarcoHassan/UnBlockDemo/blob/master/data/Bildschirmvideo%20aufnehmen%202020-02-20%20um%2016.12.36.mov"></video>
 #+END_EXPORT
