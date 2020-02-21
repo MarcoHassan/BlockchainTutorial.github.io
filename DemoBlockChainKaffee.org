@@ -1,0 +1,173 @@
+#+TITLE: IBM Blockchain Fabric
+#+AUTHOR:    Marco Hassan 
+#+DATE:      2020-02-12
+#+LANGUAGE:  en
+#+OPTIONS:   H:4 num:nil toc:2
+#+SETUPFILE: /Users/marcohassan/Desktop/TechnicalPosts/org-html-themes/setup/theme-readtheorg.setup
+
+-----
+
+This instruction set closely reproduce the one published under the
+following [[https://github.com/IBM/blockchainbean2][IBM GitHub repo]].
+
+The intent is to create a network that tracks the production of
+coffee from the beginning to the end.
+
+* Necessary Configuration
+
+Install docker and docker-compose following [[https://hub.docker.com/editions/community/docker-ce-desktop-mac/][this]] link.
+
+Check upon the successful installation of docker.
+
+#+BEGIN_SRC sh :results output
+docker --version
+docker-compose --version
+#+END_SRC
+
+#+RESULTS:
+: Docker version 19.03.5, build 633a0ea
+: docker-compose version 1.24.1, build 4667896b
+
+Moreover you will need to install the Visual Code IDE. In the latter
+there is a IBM Blockchain extension that will allow you to promptly
+get an hyperledger network up and running by deploying the
+necessary docker images and will allow to interfere with your network
+through a beginner friendly GUI. 
+
+You can download Visual Code under the [[https://code.visualstudio.com/Download][following link]].
+
+Once you download it, you can download the IBM Blockchain extension by
+following the steps in this video:
+
+#+BEGIN_EXPORT html
+<video controls="controls" width="600" height="400" 
+       name="Video Name" src="/Users/marcohassan/Desktop/Screenshots/Bildschirmvideo aufnehmen 2020-02-20 um 16.12.36.mov/"></video>
+#+END_EXPORT
+
+
+* Install nvm to select the node version you want to work with
+
+  Install node
+
+#+BEGIN_SRC sh
+ brew update
+ brew install node
+#+END_SRC
+
+ Install =nvm= to handle specific node versions and use the desired
+ version under which this tutorial was developed.
+
+ This is necessary as some of the demo available were developed in the
+ past and requires older versions of node. You can easily switch back
+ to your favorite node version once your done with the demo using nvm
+
+ #+BEGIN_SRC sh
+ ## install nvm
+ curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.33.11/install.sh | bash
+ #+END_SRC
+
+ #+BEGIN_EXAMPLE
+   % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                  Dload  Upload   Total   Spent    Left  Speed
+ 100 12819  100 12819    0     0   2542      0  0:00:05  0:00:05 --:--:--  2806
+ => Downloading nvm from git to '/Users/marcohassan/.nvm'
+ => Cloning into '/Users/marcohassan/.nvm'...
+ remote: Enumerating objects: 267, done.
+ remote: Counting objects: 100% (267/267), done.
+ remote: Compressing objects: 100% (242/242), done.
+ remote: Total 267 (delta 31), reused 80 (delta 15), pack-reused 0
+ Receiving objects: 100% (267/267), 119.47 KiB | 365.00 KiB/s, done.
+ Resolving deltas: 100% (31/31), done.
+ => Compressing and cleaning up git repository
+
+ => Appending nvm source string to /Users/marcohassan/.bashrc
+ => Appending bash_completion source string to /Users/marcohassan/.bashrc
+ => Close and reopen your terminal to start using nvm or run the following to use it now:
+ #+END_EXAMPLE
+
+ #+BEGIN_SRC sh
+ ## add the necessary nvm configuration to your bash configuration file.
+ ## notice that Mac OSX users might need to switch from ~/.bashrc to ~/.bash_profile
+ echo "export NVM_DIR='$HOME/.nvm'" >> ~/.bashrc
+ echo "[ -s '$NVM_DIR/nvm.sh' ] && \. '$NVM_DIR/nvm.sh'  # This loads nvm" >> ~/.bashrc
+ echo "[ -s '$NVM_DIR/bash_completion' ] && \. '$NVM_DIR/bash_completion'  # This loads nvm bash_completion" >> ~/.bashrc
+ #+END_SRC
+
+Check what Node.js versions are installed on your machine
+
+#+BEGIN_SRC sh
+nvm ls
+#+END_SRC
+
+If you do not have v8.9.0, install the specific node version for this tutorial.
+
+#+BEGIN_SRC sh
+nvm install v8.9.0
+#+END_SRC
+
+#+RESULTS:
+
+Change your node version to the desired version
+
+#+BEGIN_SRC sh
+nvm use v8.9.0
+#+END_SRC
+
+In the same way you can easily switch back to your favorite Node.js
+version after this tutorial.
+
+Update your =npm= to use a specific version.
+
+#+BEGIN_SRC sh
+npm install -g npm@6.0.0
+#+END_SRC
+
+* Copy the blockchainbean2 Demo
+
+#+BEGIN_SRC sh
+git clone https://github.com/IBM/blockchainbean2.git
+#+END_SRC
+
+#+BEGIN_SRC sh :results output
+cd ./blockchainbean2/
+pwd
+echo ""
+ls
+#+END_SRC
+
+#+RESULTS:
+#+begin_example
+/Users/marcohassan/Desktop/IBM_projects/minor_tasks/BlockChainTutorials/blockchainbean2
+
+CONTRIBUTING.md
+MAINTAINERS.md
+README.md
+commands.txt
+docs
+lib
+manifest.yml
+package.json
+server
+test
+web-app
+#+end_example
+
+
+Go to the =web-app= directory and install node
+
+#+BEGIN_SRC sh
+cd ./web-app
+#+END_SRC
+
+#+RESULTS:
+: /Users/marcohassan/Desktop/IBM_projects/minor_tasks/BlockChainTutorials
+
+#+BEGIN_SRC sh
+npm install --ignore-scripts
+#+END_SRC
+
+* Import the smart contract/chaincode on VS and package the contract
+
+From here on you can follow the instructions from Step 3 of the
+official Tutorial Guide [[https://github.com/IBM/blockchainbean2/blob/master/docs/run-local.md][following this README.md]].
+
