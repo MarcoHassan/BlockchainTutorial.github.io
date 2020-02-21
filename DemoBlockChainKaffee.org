@@ -41,16 +41,23 @@ Once you download it, you can download the IBM Blockchain extension by
 following the steps in this video:
 
 #+BEGIN_EXPORT html
-<iframe width="560" height="315" src="https://github.com/MarcoHassan/UnBlockDemo/blob/master/data/Bildschirmvideo%20aufnehmen%202020-02-20%20um%2016.12.36.mov" frameborder="0" allowfullscreen></iframe>
+<video controls="controls" 
+       class="video-stream" 
+       x-webkit-airplay="allow" 
+       src="http://v20.lscache8.c.youtube.com/videoplayback?sparams=id%2Cexpire%2Cip%2Cipbits%2Citag%2Cratebypass%2Coc%3AU0hPRVRMVV9FSkNOOV9MRllD&amp;itag=43&amp;ipbits=0&amp;signature=D2BCBE2F115E68C5FF97673F1D797F3C3E3BFB99.59252109C7D2B995A8D51A461FF9A6264879948E&amp;sver=3&amp;ratebypass=yes&amp;expire=1300417200&amp;key=yt1&amp;ip=0.0.0.0&amp;id=37da319914f6616c"></video>
 #+END_EXPORT
 
 #+BEGIN_EXPORT html
-<a href="https://github.com/MarcoHassan/UnBlockDemo/blob/master/data/Bildschirmvideo%20aufnehmen%202020-02-20%20um%2016.12.36.mov">Floppy drive robot</a>
+<iframe width="560" height="315" src="./data/Bildschirmvideo%20aufnehmen%202020-02-20%20um%2016.12.36.mov" frameborder="0" allowfullscreen></iframe>
+#+END_EXPORT
+
+#+BEGIN_EXPORT html
+<a href="./data/Bildschirmvideo%20aufnehmen%202020-02-20%20um%2016.12.36.mov">Floppy drive robot</a>
 #+END_EXPORT
 
 #+BEGIN_EXPORT html
 <video controls="controls" width="600" height="400" 
-       name="Video Name" src="https://github.com/MarcoHassan/UnBlockDemo/blob/master/data/Bildschirmvideo%20aufnehmen%202020-02-20%20um%2016.12.36.mov"></video>
+       name="Video Name" src="./data/Bildschirmvideo%20aufnehmen%202020-02-20%20um%2016.12.36.mov"></video>
 #+END_EXPORT
 
 #+BEGIN_EXPORT html

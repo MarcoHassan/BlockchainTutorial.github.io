@@ -3,7 +3,7 @@
 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
-<!-- 2020-02-21 Fri 18:00 -->
+<!-- 2020-02-21 Fri 18:04 -->
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>IBM Blockchain Fabric</title>
@@ -240,10 +240,10 @@ for the JavaScript code in this tag.
 <h2>Table of Contents</h2>
 <div id="text-table-of-contents">
 <ul>
-<li><a href="#org2ab8691">Necessary Configuration</a></li>
-<li><a href="#org0276ae7">Install nvm to select the node version you want to work with</a></li>
-<li><a href="#orgfe46855">Copy the blockchainbean2 Demo</a></li>
-<li><a href="#org2342e64">Import the smart contract/chaincode on VS and package the contract</a></li>
+<li><a href="#orgc6c4038">Necessary Configuration</a></li>
+<li><a href="#org494e31f">Install nvm to select the node version you want to work with</a></li>
+<li><a href="#orga90113c">Copy the blockchainbean2 Demo</a></li>
+<li><a href="#org7c459e6">Import the smart contract/chaincode on VS and package the contract</a></li>
 </ul>
 </div>
 </div>
@@ -259,9 +259,9 @@ The intent is to create a network that tracks the production of
 coffee from the beginning to the end.
 </p>
 
-<div id="outline-container-org2ab8691" class="outline-2">
-<h2 id="org2ab8691">Necessary Configuration</h2>
-<div class="outline-text-2" id="text-org2ab8691">
+<div id="outline-container-orgc6c4038" class="outline-2">
+<h2 id="orgc6c4038">Necessary Configuration</h2>
+<div class="outline-text-2" id="text-orgc6c4038">
 <p>
 Install docker and docker-compose following <a href="https://hub.docker.com/editions/community/docker-ce-desktop-mac/">this</a> link.
 </p>
@@ -300,20 +300,25 @@ Once you download it, you can download the IBM Blockchain extension by
 following the steps in this video:
 </p>
 
-<iframe width="560" height="315" src="https://github.com/MarcoHassan/UnBlockDemo/blob/master/data/Bildschirmvideo%20aufnehmen%202020-02-20%20um%2016.12.36.mov" frameborder="0" allowfullscreen></iframe>
+<video controls="controls" 
+       class="video-stream" 
+       x-webkit-airplay="allow" 
+       src="http://v20.lscache8.c.youtube.com/videoplayback?sparams=id%2Cexpire%2Cip%2Cipbits%2Citag%2Cratebypass%2Coc%3AU0hPRVRMVV9FSkNOOV9MRllD&amp;itag=43&amp;ipbits=0&amp;signature=D2BCBE2F115E68C5FF97673F1D797F3C3E3BFB99.59252109C7D2B995A8D51A461FF9A6264879948E&amp;sver=3&amp;ratebypass=yes&amp;expire=1300417200&amp;key=yt1&amp;ip=0.0.0.0&amp;id=37da319914f6616c"></video>
 
-<a href="https://github.com/MarcoHassan/UnBlockDemo/blob/master/data/Bildschirmvideo%20aufnehmen%202020-02-20%20um%2016.12.36.mov">Floppy drive robot</a>
+<iframe width="560" height="315" src="./data/Bildschirmvideo%20aufnehmen%202020-02-20%20um%2016.12.36.mov" frameborder="0" allowfullscreen></iframe>
+
+<a href="./data/Bildschirmvideo%20aufnehmen%202020-02-20%20um%2016.12.36.mov">Floppy drive robot</a>
 
 <video controls="controls" width="600" height="400" 
-       name="Video Name" src="https://github.com/MarcoHassan/UnBlockDemo/blob/master/data/Bildschirmvideo%20aufnehmen%202020-02-20%20um%2016.12.36.mov"></video>
+       name="Video Name" src="./data/Bildschirmvideo%20aufnehmen%202020-02-20%20um%2016.12.36.mov"></video>
 
 <br>
 </div>
 </div>
 
-<div id="outline-container-org0276ae7" class="outline-2">
-<h2 id="org0276ae7">Install nvm to select the node version you want to work with</h2>
-<div class="outline-text-2" id="text-org0276ae7">
+<div id="outline-container-org494e31f" class="outline-2">
+<h2 id="org494e31f">Install nvm to select the node version you want to work with</h2>
+<div class="outline-text-2" id="text-org494e31f">
 <p>
 Install node
 </p>
@@ -429,9 +434,9 @@ Update your <code>npm</code> to use a specific version.
 </div>
 </div>
 
-<div id="outline-container-orgfe46855" class="outline-2">
-<h2 id="orgfe46855">Copy the blockchainbean2 Demo</h2>
-<div class="outline-text-2" id="text-orgfe46855">
+<div id="outline-container-orga90113c" class="outline-2">
+<h2 id="orga90113c">Copy the blockchainbean2 Demo</h2>
+<div class="outline-text-2" id="text-orga90113c">
 <div class="org-src-container">
 <pre class="src src-sh">git clone https://github.com/IBM/blockchainbean2.git
 </pre>
@@ -475,9 +480,9 @@ Go to the <code>web-app</code> directory and install node
 </div>
 </div>
 
-<div id="outline-container-org2342e64" class="outline-2">
-<h2 id="org2342e64">Import the smart contract/chaincode on VS and package the contract</h2>
-<div class="outline-text-2" id="text-org2342e64">
+<div id="outline-container-org7c459e6" class="outline-2">
+<h2 id="org7c459e6">Import the smart contract/chaincode on VS and package the contract</h2>
+<div class="outline-text-2" id="text-org7c459e6">
 <p>
 From here on you can follow the instructions from Step 3 of the
 official Tutorial Guide <a href="https://github.com/IBM/blockchainbean2/blob/master/docs/run-local.md">following this README.md</a>.
@@ -488,7 +493,7 @@ official Tutorial Guide <a href="https://github.com/IBM/blockchainbean2/blob/mas
 <div id="postamble" class="status">
 <p class="date">Date: 2020-02-12</p>
 <p class="author">Author: Marco Hassan</p>
-<p class="date">Created: 2020-02-21 Fri 18:00</p>
+<p class="date">Created: 2020-02-21 Fri 18:04</p>
 <p class="validation"><a href="http://validator.w3.org/check?uri=referer">Validate</a></p>
 </div>
 </body>
