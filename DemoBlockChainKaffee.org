@@ -177,25 +177,5 @@ web-app
 
 * You are ready to go
 
-You are ready to go. Go to the =web-app= directory and install node
-packages and dependencies
-
-#+BEGIN_SRC sh
-cd ./web-app
-#+END_SRC
-
-#+RESULTS:
-: /Users/marcohassan/Desktop/IBM_projects/minor_tasks/BlockChainTutorials
-
-#+BEGIN_SRC sh
-npm install --ignore-scripts
-#+END_SRC
-
-#+BEGIN_EXPORT html
-<br>
-#+END_EXPORT
-
-
-From here on you can follow the instructions from Step 3 of the
-official Tutorial Guide [[https://github.com/IBM/blockchainbean2/blob/master/docs/run-local.md][following this README.md]].
-
+From here on you are ready to go. We expect you on Wednesday for a
+nice hands-on lab, where we will deploy the permissioned Blockchain Network.
