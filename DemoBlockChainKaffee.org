@@ -42,7 +42,7 @@ following the steps in this video:
 
 #+BEGIN_EXPORT html
 <video controls="controls" width="600" height="400" 
-       name="Video Name" src="/Users/marcohassan/Desktop/Screenshots/Bildschirmvideo aufnehmen 2020-02-20 um 16.12.36.mov/"></video>
+       name="Video Name" src="https://github.com/MarcoHassan/UnBlockDemo/blob/master/data/Bildschirmvideo%20aufnehmen%202020-02-20%20um%2016.12.36.mov"></video>
 #+END_EXPORT
 
 #+BEGIN_EXPORT html
