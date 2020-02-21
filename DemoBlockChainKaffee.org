@@ -41,17 +41,15 @@ Once you download it, you can download the IBM Blockchain extension by
 following the steps in this video:
 
 #+BEGIN_EXPORT html
-<a href="./data/Bildschirmvideo%20aufnehmen%202020-02-20%20um%2016.12.36.mov">View Raw from Here</a>
-#+END_EXPORT
-
-#+BEGIN_EXPORT html
 <video controls="controls" width="600" height="400" 
        name="Video Name" src="./data/Bildschirmvideo%20aufnehmen%202020-02-20%20um%2016.12.36.mov"></video>
 #+END_EXPORT
 
 #+BEGIN_EXPORT html
 <br>
+<br>
 #+END_EXPORT
+
 
 * Install nvm to select the node version you want to work with
 
@@ -177,8 +175,10 @@ test
 web-app
 #+end_example
 
+* You are ready to go
 
-Go to the =web-app= directory and install node
+You are ready to go. Go to the =web-app= directory and install node
+packages and dependencies
 
 #+BEGIN_SRC sh
 cd ./web-app
@@ -195,7 +195,6 @@ npm install --ignore-scripts
 <br>
 #+END_EXPORT
 
-* Import the smart contract/chaincode on VS and package the contract
 
 From here on you can follow the instructions from Step 3 of the
 official Tutorial Guide [[https://github.com/IBM/blockchainbean2/blob/master/docs/run-local.md][following this README.md]].
