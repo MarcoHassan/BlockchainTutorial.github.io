@@ -35,7 +35,12 @@ get an hyperledger network up and running by deploying the
 necessary docker images and will allow to interfere with your network
 through a beginner friendly GUI. 
 
-You can download Visual Code under the [[https://code.visualstudio.com/Download][following link]].
+Notice that due to some dependency issues arising with a recent
+upgrade you should download VS code version 1.39 at the [[https://code.visualstudio.com/updates/v1_39][following
+link]].
+
+Should you have issues on Catalina Mac OS to open visual studio follow
+[[https://github.com/microsoft/vscode/issues/74782#issuecomment-541420688][this instructions]].
 
 Once you download it, you can download the IBM Blockchain extension by
 following the steps in this video:
